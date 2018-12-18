@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import "compass";
+$color-main: #00425f;
+$color-main02: #42c1c7;
+$color-main03: #1a2b49;
+
+@mixin fz($s: 14) {
+  font-size: $s + px;
+  font-size: ($s / 10) + rem;
+}
+
+@mixin fzsp($s) {
+  font-size: $s/1080*100vw;
+}
+
+@function calcRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+// ==============================================
+// Font Face
+// ==============================================
+
+@mixin font-face($fontname: fontFamilyName, $fontsrc: fontFileSrc) {
+  @font-face {
+    font-family: quote($fontname);
+    src: url('#{unquote($fontsrc)}.eot');
+    src: url('#{unquote($fontsrc)}.eot?#iefix') format('embedded-opentype'),
+    url('#{unquote($fontsrc)}.woff') format('woff'),
+    url('#{unquote($fontsrc)}.ttf') format('truetype'),
+    url('#{unquote($fontsrc)}.svg##{unquote($fontname)}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+
+@include font-face("GT-Eesti-Light", "/izbooking/common/fonts/GTEestiLight/GT-Eesti-Pro-Display-Light");
+@include font-face("GT-Eesti-Regular", "/izbooking/common/fonts/GTEestiRegular/GT-Eesti-Pro-Display-Regular");
+@include font-face("GT-Eesti-Medium", "/izbooking/common/fonts/GTEestiMedium/GT-Eesti-Pro-Display-Medium");
+@include font-face("GT-Eesti-Bold", "/izbooking/common/fonts/GTEestiBold/GT-Eesti-Pro-Display-Bold");
+@include font-face("FontAwesome", "/izbooking/common/fonts/FontAwesome/fontawesome-webfont");
+@include font-face("iz", "/izbooking/common/fonts/iz/iz");
+
+@mixin GTEestiLight {
+  font-family: GT-Eesti-Light;
+  font-weight: 300;
+}
+
+@mixin GTEestiRegular {
+  font-family: GT-Eesti-Regular;
+  font-weight: 400;
+}
+
+@mixin GTEestiMedium {
+  font-family: GT-Eesti-Medium;
+  font-weight: 500;
+}
+
+@mixin GTEestiBold {
+  font-family: GT-Eesti-Bold;
+  font-weight: 700;
+}

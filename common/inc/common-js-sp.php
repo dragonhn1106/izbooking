@@ -1,0 +1,6 @@
+<script src="/izbooking/common/js/vendor/jquery-3.3.1.min.js"></script>
+<script src="/izbooking/common/js/vendor/pikaday.js"></script>
+<script src="/izbooking/common/js/vendor/pikaday.jquery.js"></script>
+<script src="/izbooking/common/js/vendor/jquery-ui.js"></script>
+<script src="/izbooking/common/js/vendor/jquery.ui.touch-punch.min.js"></script>
+<script src="/izbooking/common/js/main_sp.js"></script>

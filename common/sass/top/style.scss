@@ -1,0 +1,711 @@
+@charset 'UTF-8';
+
+@import "compass", "../mixin";
+
+.top {
+	.section-top-deal {
+		padding: 45px 0 20px;
+	}
+
+	.section-banner-text {
+		padding: 40px 0;
+		background: #f7f7f7;
+
+		&.bg01 {
+			padding: 85px 0 70px;
+			color: #d7ffdc;
+			background: #025b61;
+		}
+		&.bg02 {
+			padding: 62px 0 40px;
+			background: url(/common/images/share/bg_subscribe.jpg) no-repeat center;
+			background-size: cover;
+		}
+		.text01 {
+			margin-bottom: 5px;
+			@include fz(20);
+		  line-height: 1.4;
+		  text-transform: uppercase;
+		  color: $color-main03;
+		}
+		.text02 {
+			@include fz(60);
+			line-height: 1.3;
+			color: $color-main02;
+			text-transform: uppercase;
+		}
+		.text03 {
+			margin-bottom: 15px;
+			@include fz(20);
+			line-height: 2.4;
+			color: $color-main03;
+		}
+		.text04 {
+			margin-bottom: 20px;
+			@include fz(50);
+			@include GTEestiMedium;
+			line-height: 1.3;
+		}
+		.text05 {
+			@include fz(20);
+			line-height: 1.6;
+		}
+		.text06 {
+			margin-bottom: 20px;
+			@include fz(50);
+			@include GTEestiBold;
+			line-height: 1.3;
+			color: $color-main02;
+			text-transform: uppercase;
+		}
+		.text07 {
+			@include fz(14);
+			line-height: 1.3;
+			color: #3f3e41;
+		}
+	}
+
+	.section-travel-deal {
+		padding-top: 35px;
+	}
+
+	.section-last-deal {
+		padding: 35px 0 15px;
+		.ttl-h2 {
+			margin-bottom: 20px;
+		}
+	}
+	.section-last-articles {
+		padding: 20px 0 43px;
+	}
+	.section-top-tour-destinations {
+		padding: 45px 0;
+		.ttl-h2 {
+			margin-bottom: 25px;
+		}
+		.text {
+			margin-top: 40px;
+			@include fz(15);
+			a {
+				color: $color-main02;
+				border-bottom: 1px solid transparent;
+				@include transition(all 300ms);
+
+				&:hover {
+					color: $color-main;
+					border-bottom-color: $color-main;
+				}
+			}
+		}
+	}
+
+	.country-box {
+		position: relative;
+		@include display-flex;
+		@include flex-direction(row);
+		@include justify-content(space-between);
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			display: none;
+			z-index: 2;
+		}
+
+		svg {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			z-index: 2;
+			@include transform(translateX(-50%));
+		}
+
+		&.country-01 {
+			margin-bottom: 213px;
+
+			svg {
+				left: 597/1185*100%;
+				width: 135/1185*100%;
+				@include transform(translateY(57px));
+			}
+			&::after {
+				left: 597/1185*100%;
+				width: 129/1185*100%;
+				padding-bottom: 207/1185*100%;
+				background: url(/common/images/top/bg_01.png) no-repeat center;
+				background-size: contain;
+				@include transform(translateY(57/207*100%));
+			}
+			.country-box-all {
+				background: #fc0;
+			}
+		}
+		&.country-02 {
+			margin-bottom: 211px;
+			@include flex-direction(row-reverse);
+
+			svg {
+				left: 538/1185*100%;
+				width: 131/1185*100%;
+				@include transform(translateY(45px));
+			}
+			&::after {
+				left: 538/1185*100%;
+				width: 112/1185*100%;
+				padding-bottom: 212/1185*100%;
+				background: url(/common/images/top/bg_02.png) no-repeat center;
+				background-size: contain;
+				@include transform(translateY(45/212*100%));
+			}
+			.country-box-all {
+				@include display-flex;
+				@include flex-direction(column-reverse);
+				background: #ffcbcb;
+
+				.meta {
+					text-align: right;
+				}
+			}
+		}
+		&.country-03 {
+			margin-bottom: 232px;
+
+			svg {
+				left: 543/1185*100%;
+				width: 132/1185*100%;
+				@include transform(translateY(45px));
+			}
+			&::after {
+				left: 543/1185*100%;
+				width: 130/1185*100%;
+				padding-bottom: 224/1185*100%;
+				background: url(/common/images/top/bg_03.png) no-repeat center;
+				background-size: contain;
+				@include transform(translateY(38/224*100%));
+			}
+			.country-box-all {
+				background: #c3fcff;
+			}
+		}
+
+		.country-box-all {
+			width: 570/1185*100%;
+			background: #ccc;
+
+			.meta {
+				padding: 45/570*100%;
+				color: $color-main03;
+			}
+			.country-box-name {
+				@include fz(45);
+				line-height: 1.1;
+				@include GTEestiRegular;
+			}
+			.country-box-description {
+				margin-bottom: 30px;
+				@include fz(16);
+				line-height: 1.5;
+			}
+		}
+		.country-box-tour {
+			@include display-flex;
+			@include flex-direction(row);
+			width: 570/1185*100%;
+		}
+		.country-box-ul {
+			@include display-flex;
+			@include flex-direction(row);
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
+
+			.item {
+				@include display-flex;
+				@include flex-direction(column);
+				@include justify-content(space-between);
+				width: 270/570*100%;
+				padding-bottom: 20px;
+				margin-top: 20px;
+
+				&:first-child,
+				&:nth-child(2) {
+					margin-top: 0;
+				}
+				&:hover {
+					.thumb {
+						img {
+							@include transform(scale(1.1));
+						}
+					}
+				}
+
+				.thumb {
+					margin-bottom: 8px;
+					overflow: hidden;
+				}
+
+				.item-title {
+					a {
+						@include fz(16);
+						@include GTEestiMedium;
+						line-height: 1.5;
+						color: $color-main03;
+					}
+				}
+				.deal-star {
+					@include fz(12);
+				}
+				.item-entry-bottom {
+					@include display-flex;
+					@include flex-direction(row);
+					@include justify-content(space-between);
+					@include align-items(flex-end);
+				}
+			}
+		}
+	}
+
+	.table-box {
+		padding: 0 15px;
+		margin-bottom: 42px;
+		color: $color-main03;
+		@include fz(16);
+		line-height: 1.5;
+
+		.departing,
+		.days {
+			@include GTEestiMedium;
+		}
+		.days,
+		.price {
+			text-align: center;
+		}
+		.only-sp {
+			display: none;
+		}
+		.maps-thumb {
+			@include border-radius(100%);
+		}
+		.price {
+			.price-old {
+				text-decoration: line-through;
+			}
+			.price-news {
+				@include fz(18);
+				color: #d0021b;
+				@include GTEestiMedium;
+			}
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			.cl01 {
+				width: 146/1155*100%;
+			}
+			.cl02 {
+				width: 595/1155*100%;
+			}
+			.cl03 {
+				width: 80/1155*100%;
+			}
+			.cl04 {
+				width: 62/1155*100%;
+			}
+			.cl05 {
+				width: 107/1155*100%;
+			}
+			.cl06 {
+				width: 180/1155*100%;
+			}
+			th,
+			td {
+				padding: 5px 10px;
+			}
+			thead {
+				@include GTEestiMedium;
+				text-align: left;
+				th {
+					padding: 7px 10px;
+				}
+			}
+			tbody {
+				tr {
+					border-top: 2px solid #e5e5e5;
+					&:nth-child(2n-1) {
+						background: #f4f4f4;
+					}
+				}
+			}
+		}
+		a {
+			color: $color-main02;
+			@include transition(all 300ms);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.list-last-articles {
+		padding: 0 15px 10px;
+		@include display-flex;
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include justify-content(space-between);
+
+		.item {
+			@include display-flex;
+			@include flex-direction(column);
+			@include justify-content(space-between);
+			width: 370/1155*100%;
+			margin-bottom: 30px;
+			@include transition(all 300ms);
+
+			&:hover {
+				@include box-shadow(0 0 15px 0 rgba(0, 0, 0, .3));
+				img {
+					@include transform(scale(1.1));
+				}
+			}
+			.thumb {
+				overflow: hidden;
+			}
+			.item-meta {
+				@include display-flex;
+				@include flex-direction(column);
+				flex-grow: 1;
+				padding: 18px 20/370*100% 15px;
+				border: 1px solid #bbb;
+				border-top: 5px solid $color-main02;
+
+				.item-meta-top {
+					flex-grow: 1;
+				}
+				.meta-01 {
+					@include display-flex;
+					@include flex-direction(row);
+					@include justify-content(flex-start);
+					@include fz(16);
+					line-height: 1.5;
+					color: #aab2bd;
+					li {
+						padding: 0 15px;
+						border-left: 1px solid #aab2bd;
+						&:first-child {
+							padding-left: 0;
+							border-left: none;
+						}
+						&:last-child {
+							padding-right: 0;
+						}
+					}
+					a {
+						color: $color-main02;
+					}
+				}
+				.meta-02 {
+					margin: 10px 0;
+					@include GTEestiMedium;
+					@include fz(20);
+					line-height: 1.4;
+					a {
+						color: $color-main;
+					}
+				}
+				.excerpt {
+					margin-bottom: 5px;
+					@include fz(16);
+					line-height: 1.6;
+					color: #b3b8c1;
+				}
+				.read-more {
+					display: inline-block;
+					@include GTEestiMedium;
+					color: $color-main02;
+					border-bottom: 1px solid transparent;
+					.fa {
+						margin-left: 15px;
+					}
+					&:hover {
+						border-bottom-color: $color-main02;
+					}
+				}
+			}
+		}
+	}
+
+	.form-subscribe {
+		margin-bottom: 10px;
+		.form-group {
+			@include display-flex;
+			@include justify-content(center);
+			input {
+				width: 230/1185*100%;
+			}
+			.form-control {
+				padding: 9px 10px;
+				text-align: center;
+				border: none;
+			}
+		}
+		.btn {
+			width: 40px;
+			text-align: center;
+		}
+	}
+
+	.links-wrap {
+		@include display-flex;
+		@include flex-direction(row);
+		@include justify-content(space-between);
+
+		.link-cols {
+			width: 200/1185*100%;
+		}
+
+		.list-links {
+			li {
+				position: relative;
+				padding-left: 10px;
+				margin-bottom: 17px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+				.fa {
+					position: absolute;
+					top: 4px;
+					left: 0;
+					@include fz(12);
+				}
+				a {
+					display: inline-block;
+					@include fz(16);
+					color: $color-main;
+					border-bottom: 1px solid transparent;
+					@include transition(all 300ms);
+
+					&:hover {
+						color: $color-main02;
+						border-bottom-color: $color-main02;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media (max-width: 980px) {
+	html {
+		font-size: 8px;
+	}
+}
+@media (max-width: 768px) {
+	.top {
+		.country-box {
+			position: relative;
+			padding-bottom: 50px;
+			@include flex-wrap(wrap);
+
+			&.country-02 {
+				.country-box-all {
+					@include flex-direction(column);
+				}
+			}
+			.country-box-all {
+				width: 100vw;
+				margin: 0 calc(50% - 50vw) 30px;
+
+				.meta {
+					padding: 30px 40px;
+					text-align: center !important;
+				}
+				.country-box-name {
+					margin-bottom: 10px;
+				}
+				.country-box-description {
+					margin-bottom: 0;
+				}
+				.country-box-btn {
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					width: 100%;
+					@include transform(translateX(-50%));
+				}
+			}
+			.country-box-tour {
+				width: 100%;
+				overflow: auto;
+				-webkit-overflow: auto;
+				-webkit-overflow-scrolling: auto;
+			}
+			.country-box-ul {
+				@include flex-wrap(nowrap);
+
+				.item {
+					width: 300px;
+					min-width: 300px;
+					margin-top: 0;
+
+					&:not(:first-child) {
+						margin-left: 20px;
+					}
+				}
+			}
+		}
+		.section-top-tour-destinations {
+
+		}
+	}
+}
+@media (max-width: 700px) {
+	.top {
+		.links-wrap {
+			@include flex-wrap(wrap);
+			.link-cols {
+				display: none;
+				width: 48%;
+				&:first-child,
+				&:nth-child(2) {
+					display: block;
+				}
+				li {
+					// &:last-child {
+					// 	margin-bottom: 17px;
+					// }
+				}
+			}
+		}
+		.table-box {
+			padding: 0;
+			.seats {
+				display: none;
+			}
+			.price {
+				.price-news {
+					display: block;
+				}
+			}
+			.only-pc {
+				display: none;
+			}
+			.only-sp {
+				display: block;
+			}
+			table {
+				.cl02 {
+					width: 40%;
+				}
+				.cl04 {
+					width: 3%;
+				}
+				.cl05 {
+					width: 4%;
+				}
+				tr {
+					th:first-child,
+					td:first-child {
+						display: none;
+					}
+					th:nth-child(3),
+					td:nth-child(3) {
+						display: none;
+					}
+				}
+				thead {
+					th {
+						padding: 7px 1%;
+					}
+				}
+				td {
+					padding: 5px 2%;
+				}
+			}
+		}
+		.list-last-articles {
+			padding: 0;
+			@include flex-wrap(wrap);
+			.item {
+				width: 100%;
+				padding: 10px;
+				@include flex-direction(row);
+				border: 1px solid #b7b7b7;
+
+				.thumb {
+					width: 30%;
+				}
+				.item-meta {
+					flex-grow: 0;
+					width: 68%;
+					padding: 0;
+					border: none;
+					.item-meta-bottom {
+						text-align: right;
+					}
+					.meta-01 {
+						line-height: 1.1;
+					}
+					.meta-02 {
+						margin: 5px 0;
+						@include fz(18);
+					}
+					.excerpt {
+						@include fz(14);
+					}
+				}
+			}
+		}
+		.section-banner-text {
+			.text02 {
+				@include fz(50);
+			}
+			.text06 {
+				@include fz(40);
+			}
+		}
+		.form-subscribe {
+			.form-group {
+				input {
+					width: 70%;
+					max-width: 210px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 640px) {
+	.top {
+		.section-top-deal {
+			background: #f5f9fb;
+		}
+	}
+}
+@media (max-width: 600px) {
+	.top {
+		.section-top-tour-destinations {
+			.ttl-h2,
+			.text {
+				text-align: left;
+			}
+		}
+	}
+}
+@media (max-width: 400px) {
+	.top {
+		.country-box {
+			.country-box-ul {
+				.item {
+					width: 260px;
+					min-width: 260px;
+				}
+			}
+		}
+	}
+}
+
